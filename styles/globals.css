@@ -1,9 +1,22 @@
-html,
-body {
-  padding: 0;
+/* :root {
+} */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ibm);
+  background-color: var(--white);
+  color: var(--black);
+  transition: background-color 0.08s ease;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -11,6 +24,70 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  color: transparent;
+}
+:after,
+:before {
+  content: "";
+  position: absolute;
+}
+.spacer {
+  /* padding: 0 4rem 0; */
+  /* max-width: 76.2rem; */
+  margin: 0 auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 10rem;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  /* padding-inline-start: 0;
+  scroll-padding: 0; */
+  /* scroll-padding: 0 40px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px; */
+  /* padding: 0 4rem; */
+  
+  scrollbar-width: thin;
+  /* -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out; */
+  /* -webkit-scrollbar-color: #757575 transparent;
+  -moz-scrollbar-color: #757575 transparent;
+  -ms-scrollbar-color: #757575 transparent; */
+  scrollbar-color: #3b3b3b transparent;
+  /* -webkit-scrollbar-width: thin;
+  -moz-scrollbar-width: thin;
+  -ms-scrollbar-width: thin; */
+}
+::-webkit-scrollbar {
+  height: 8px;
+  overflow: visible;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b3b3b !important;
+  background-clip: padding-box !important;
+  padding: 2rem !important;
+  /* border-left: 40px solid transparent;
+  border-top: 10px solid transparent; */
+  border-radius: 20px !important;
+}
+.box {
+  flex: 0 0 calc(33% - 1rem);
+  scroll-snap-align: start;
+  margin-bottom: 2rem;
 }
