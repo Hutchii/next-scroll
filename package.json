@@ -11,12 +11,7 @@
   "dependencies": {
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-scroll-into-view": "^1.12.0",
-    "react-scroll-into-view-if-needed": "^3.0.1",
-    "scroll-into-view-if-needed": "^2.2.29",
-    "seamless-scroll-polyfill": "^2.1.8",
-    "smoothscroll-polyfill": "^0.4.4"
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
     "eslint": "8.17.0",

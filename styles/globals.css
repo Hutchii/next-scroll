@@ -1,26 +1,20 @@
-:root {
-  --white: #f7f3f0;
-  --ibm: "IBM Plex Sans", sans-serif;
-  --amita: "Amita", cursive;
-}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: var(--amita);
-  background-color: var(--white);
-  color: var(--black);
-  transition: background-color 0.08s ease;
-  scroll-behavior: smooth;
-}
-
 html {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Joan", serif;
+  background-color: #f7f3f0;
+  color: black;
+  transition: background-color 0.08s ease;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -36,11 +30,6 @@ img {
   max-width: 100%;
   height: auto;
   color: transparent;
-}
-:after,
-:before {
-  content: "";
-  position: absolute;
 }
 .spacer {
   padding: 0 8rem 0;
@@ -60,15 +49,13 @@ main {
   margin-inline-start: 80px;
   margin-inline-end: 80px;
   scrollbar-width: thin;
-  /* -webkit-transition: color 250ms ease-in-out;
-  transition: color 250ms ease-in-out; */
-  /* -webkit-scrollbar-color: #757575 transparent;
-  -moz-scrollbar-color: #757575 transparent;
-  -ms-scrollbar-color: #757575 transparent; */
+  -webkit-scrollbar-color: #4d4d4d transparent;
+  -moz-scrollbar-color: #4d4d4d transparent;
+  -ms-scrollbar-color: #4d4d4d transparent;
   scrollbar-color: #4d4d4d transparent;
-  /* -webkit-scrollbar-width: thin;
+  -webkit-scrollbar-width: thin;
   -moz-scrollbar-width: thin;
-  -ms-scrollbar-width: thin; */
+  -ms-scrollbar-width: thin;
 }
 ::-webkit-scrollbar {
   height: 8px;
@@ -88,9 +75,6 @@ main {
   scroll-snap-align: start;
   margin-bottom: 2rem;
 }
-
-/* NAVIGATION */
-
 header nav {
   height: 8rem;
   font-size: 2rem;
@@ -108,8 +92,8 @@ header nav li {
 }
 .slider-nav {
   display: flex;
-  justify-content: end;
-  gap: 4rem;
+  justify-content: flex-end;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 .slider-nav button {
@@ -118,14 +102,40 @@ header nav li {
   cursor: pointer;
   font-family: var(--satisfy);
   display: block;
+  font-size: 2rem;
 }
 .next-button {
   transform: rotate(180deg);
 }
 .box h1 {
-  font-size: 1.7rem;
-  line-height: 1.6;
-  margin: 1rem 0;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 400;
+}
+.quote {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.author {
+  display: inline-block;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.8rem;
+  cursor: pointer;
+  height: 24px;
+}
+.author:hover {
+  border-bottom: 1px solid black;
+}
+footer nav {
+  margin: 15rem 0 3rem 0;
+}
+footer ul {
+  display: flex;
+  gap: 4rem;
+  font-size: 1.6rem;
+  justify-content: center;
 }
 @media (max-width: 1919.9px) {
   .container {
@@ -158,6 +168,9 @@ header nav li {
   .spacer {
     padding: 0 4rem 0;
   }
+  footer nav {
+    margin: 10rem 0 2rem 0;
+  }
 }
 @media (max-width: 900px) {
   .container {
@@ -183,6 +196,12 @@ header nav li {
     padding: 0 2.4rem 0;
   }
   .box h1 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
+  }
+  footer nav {
+    margin: 6rem 0 2rem 0;
+  }
+  .quote {
+    font-size: 1.6rem;
   }
 }

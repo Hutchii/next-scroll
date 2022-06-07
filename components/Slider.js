@@ -1,7 +1,6 @@
 import Slide from "./Slide";
-import { createRef, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import scrollIntoView from "scroll-into-view-if-needed";
-import useObserver from "../hooks/useObserver";
 import SliderNavigation from "./SliderNavigation";
 import { slidesData } from "../utils/slidesData";
 
@@ -37,8 +36,7 @@ export default function Slider() {
           <Slide
             key={slide.id}
             reff={i === 0 ? slideRef : null}
-            id={slide.id}
-            quote={slide.quote}
+            data={slide}
           />
         ))}
       </div>
