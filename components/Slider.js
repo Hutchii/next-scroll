@@ -1,17 +1,9 @@
 import Slide from "./Slide";
 import { createRef, useRef, useState, useEffect } from "react";
 import scrollIntoView from "scroll-into-view-if-needed";
-import useObserver from "../../../hooks/useObserver";
-
-const slides = [
-  { id: 0, name: "tennis" },
-  { id: 1, name: "tennis" },
-  { id: 2, name: "tennis" },
-  { id: 3, name: "tennis" },
-  { id: 4, name: "tennis" },
-  { id: 5, name: "tennis" },
-  { id: 6, name: "tennis" },
-];
+import useObserver from "../hooks/useObserver";
+import SliderNavigation from "./SliderNavigation";
+import { slidesData } from "../utils/slidesData";
 
 export default function Slider() {
   const [slideWidth, setSlideWidth] = useState(0);
@@ -21,13 +13,13 @@ export default function Slider() {
   const nextSlide = () => {
     sliderRef.current.scrollBy({
       behavior: "smooth",
-      left: slideWidth / 1.5 + 1,
+      left: slideWidth / 1.5,
     });
   };
   const prevSlide = () => {
     sliderRef.current.scrollBy({
       behavior: "smooth",
-      left: -slideWidth / 1.5 + 1,
+      left: -slideWidth / 1.5,
     });
   };
 
@@ -36,14 +28,20 @@ export default function Slider() {
   }, []);
 
   return (
-    <main className="spacer">
+    <main>
+      <div className="slider-nav spacer">
+        <SliderNavigation prev={prevSlide} next={nextSlide} />
+      </div>
       <div className="container" ref={sliderRef}>
-        {slides.map((slide, i) => (
-          <Slide key={slide.id} reff={i === 0 ? slideRef : null} id={slide.id} />
+        {slidesData.map((slide, i) => (
+          <Slide
+            key={slide.id}
+            reff={i === 0 ? slideRef : null}
+            id={slide.id}
+            quote={slide.quote}
+          />
         ))}
       </div>
-      <button onClick={nextSlide}>Next</button>
-      <button onClick={prevSlide}>Prev</button>
     </main>
   );
 }

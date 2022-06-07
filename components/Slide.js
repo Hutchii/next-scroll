@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Slide({ id, reff }) {
+export default function Slide({ id, reff, quote }) {
   return (
-    <div className="box" id={id} ref={reff}>
+    <div className="box" ref={reff}>
       <Image
         src={`/images/${id + 1}.jpg`}
         alt="Tennis"
@@ -10,6 +10,7 @@ export default function Slide({ id, reff }) {
         height={700}
         quality={85}
       />
+      <h1>{quote}</h1>
     </div>
   );
 }
