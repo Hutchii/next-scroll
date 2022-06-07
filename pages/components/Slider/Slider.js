@@ -4,13 +4,13 @@ import scrollIntoView from "scroll-into-view-if-needed";
 import useObserver from "../../../hooks/useObserver";
 
 const slides = [
+  { id: 0, name: "tennis" },
   { id: 1, name: "tennis" },
   { id: 2, name: "tennis" },
   { id: 3, name: "tennis" },
   { id: 4, name: "tennis" },
   { id: 5, name: "tennis" },
   { id: 6, name: "tennis" },
-  { id: 7, name: "tennis" },
 ];
 
 export default function Slider() {
@@ -21,13 +21,13 @@ export default function Slider() {
   const nextSlide = () => {
     sliderRef.current.scrollBy({
       behavior: "smooth",
-      left: slideWidth,
+      left: slideWidth / 1.5 + 1,
     });
   };
   const prevSlide = () => {
     sliderRef.current.scrollBy({
       behavior: "smooth",
-      left: -slideWidth,
+      left: -slideWidth / 1.5 + 1,
     });
   };
 
@@ -39,7 +39,7 @@ export default function Slider() {
     <main className="spacer">
       <div className="container" ref={sliderRef}>
         {slides.map((slide, i) => (
-          <Slide key={slide.id} reff={i === 0 ? slideRef : null} />
+          <Slide key={slide.id} reff={i === 0 ? slideRef : null} id={slide.id} />
         ))}
       </div>
       <button onClick={nextSlide}>Next</button>
