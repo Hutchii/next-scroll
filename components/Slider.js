@@ -1,6 +1,5 @@
 import Slide from "./Slide";
 import { useRef, useState, useEffect } from "react";
-import scrollIntoView from "scroll-into-view-if-needed";
 import SliderNavigation from "./SliderNavigation";
 import { slidesData } from "../utils/slidesData";
 
