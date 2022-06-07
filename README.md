@@ -13,7 +13,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 .box {
   flex: 0 0 calc(33% - 1rem);
   scroll-snap-align: start;
-  margin-bottom: 2rem;
 }
 
 /* For screens < 1920px */
