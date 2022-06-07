@@ -29,7 +29,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 }
 ```
 ### Navigation (prev, next buttons):
-One ref for container which is used by scrollBy method. Second ref reads box width in useEffect. That width is used by scrollBy to scroll when we click one of the buttons. There are cases when while scrolling to reach last slide, slider will only have to scroll small amount of pixels (that the space left). If we would use scrollBy to scroll to the previous slide, with the original width of the box it would scroll two slides. By diving width by 1.5 we always scroll to the slide we intended to.
+One ref for container which is used by scrollBy method. Second ref reads box width in useEffect. That width is used by scrollBy to scroll when we click one of the buttons. There are cases when while scrolling to reach last slide, slider will only have to scroll small amount of pixels (that the space left). If we would use scrollBy to scroll to the previous slide, with the original width of the box it would scroll two slides. By dividing width by 1.5 we always scroll to the slide we intended to.
 
 ### On window size change:
 useEffect reads width only once. After resizing window it will stay the same. To change that you could write additional logic in useEffect to detect window resize change.
