@@ -11,7 +11,6 @@ export default function Slider() {
       behavior: "smooth",
       left: (sign * sliderRef.current.firstChild.clientWidth) / 1.5,
     });
-
   return (
     <main>
       <div className="slider-nav spacer">

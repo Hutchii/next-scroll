@@ -3,16 +3,16 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
 
 function MyApp({ Component, pageProps }) {
-  // useEffect(() => {
-  //   if (!("scrollBehavior" in document.documentElement.style)) {
-  //     async () => await import("scroll-behavior-polyfill");
-  //   }
-  //   // if (!("scrollBehavior" in document.documentElement.style))
-  //   //   dynamic(() => import("scroll-behavior-polyfill"));
-  // }, []);
+  useEffect(() => {
+    // async () => await 
+    if (!("scrollBehavior" in document.documentElement.style)) {
+      import("scroll-behavior-polyfill");
+    }
+    // if (!("scrollBehavior" in document.documentElement.style))
+    //   dynamic(() => import("scroll-behavior-polyfill"));
+  }, []);
   return (
     <>
       <Head>
