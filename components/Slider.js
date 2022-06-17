@@ -5,12 +5,11 @@ import { slidesData } from "../utils/slidesData";
 
 export default function Slider() {
   const sliderRef = useRef(null);
-  const slideRef = useRef(null);
 
   const changeSlide = (sign) =>
     sliderRef.current.scrollBy({
       behavior: "smooth",
-      left: (sign * slideRef.current.clientWidth) / 1.5,
+      left: (sign * sliderRef.current.firstChild.clientWidth) / 1.5,
     });
 
   return (
@@ -23,7 +22,7 @@ export default function Slider() {
       </div>
       <div className="container" ref={sliderRef}>
         {slidesData.map((slide, i) => (
-          <Slide key={slide.id} slideRef={i === 0 ? slideRef : null} data={slide} />
+          <Slide key={slide.id} data={slide} />
         ))}
       </div>
     </main>
