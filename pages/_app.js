@@ -6,10 +6,13 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    if (!("scrollBehavior" in document.documentElement.style))
-      dynamic(() => import("scroll-behavior-polyfill"));
-  }, []);
+  // useEffect(() => {
+  //   if (!("scrollBehavior" in document.documentElement.style)) {
+  //     async () => await import("scroll-behavior-polyfill");
+  //   }
+  //   // if (!("scrollBehavior" in document.documentElement.style))
+  //   //   dynamic(() => import("scroll-behavior-polyfill"));
+  // }, []);
   return (
     <>
       <Head>
