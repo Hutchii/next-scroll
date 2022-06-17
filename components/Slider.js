@@ -21,7 +21,7 @@ export default function Slider() {
         />
       </div>
       <div className="container" ref={sliderRef}>
-        {slidesData.map((slide, i) => (
+        {slidesData.map((slide) => (
           <Slide key={slide.id} data={slide} />
         ))}
       </div>
