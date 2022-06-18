@@ -49,9 +49,10 @@ export default function Slider() {
     <main>
       <div className="slider-nav spacer"></div>
       <Slider>
-        {slidesData.map((slide) => (
+        {/* {slidesData.map((slide) => (
           <Slide key={slide.id} data={slide} />
-        ))}
+        ))} */}
+        <Slide />
       </Slider>
       {/* <div
         className="container"
