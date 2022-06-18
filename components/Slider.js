@@ -47,6 +47,7 @@ export default function Slider() {
   // };
   return (
     <main>
+      <h1>UPDATED</h1>
       <div className="slider-nav spacer"></div>
       <Slider>
         {slidesData.map((slide) => (

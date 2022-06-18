@@ -33,7 +33,7 @@ export const useSlider = ({ navigation = true, pagination = false }) => {
             {children.map((dot) => (
               <div
                 key={dot.key}
-                onClick={() => handlePagination(dot.id)}
+                onClick={() => handlePagination(dot.key)}
                 className="dot"
               />
             ))}
