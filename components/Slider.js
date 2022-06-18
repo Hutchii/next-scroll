@@ -1,6 +1,4 @@
 import Slide from "./Slide";
-import { useRef, useState } from "react";
-import SliderNavigation from "./SliderNavigation";
 import { slidesData } from "../utils/slidesData";
 import { useSlider } from "../hooks/useSlider";
 

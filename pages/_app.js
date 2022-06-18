@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   // useEffect(() => {
