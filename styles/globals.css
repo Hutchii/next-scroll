@@ -8,13 +8,13 @@ html {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Joan", serif;
   background-color: #f7f3f0;
   color: black;
-  scroll-behavior: smooth;
 }
 
 a {
