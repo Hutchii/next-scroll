@@ -126,6 +126,19 @@ header nav li {
 .author:hover {
   border-bottom: 1px solid black;
 }
+.pagination {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #4d4d4d;
+  border-radius: 100%;
+  cursor: pointer;
+}
 footer nav {
   margin: 15rem 0 3rem 0;
 }
