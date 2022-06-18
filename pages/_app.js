@@ -6,10 +6,10 @@ import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    // async () => await 
     if (!("scrollBehavior" in document.documentElement.style)) {
       import("scroll-behavior-polyfill");
     }
+    // async () => await
     // if (!("scrollBehavior" in document.documentElement.style))
     //   dynamic(() => import("scroll-behavior-polyfill"));
   }, []);
