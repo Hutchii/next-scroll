@@ -16,32 +16,27 @@ export const useSlider = ({ navigation = true, pagination = false }) => {
       block: "nearest",
     });
 
-  const Slider = ({ children }) => {
-    return (
-      <>
-        {navigation && (
-          <div className="slider-nav spacer">
-            <button onClick={() => handleNavigation(-1)}>&#8592; Prev</button>
-            <button onClick={() => handleNavigation(1)}>Next &#8594;</button>
-          </div>
-        )}
-        <div className="container" ref={sliderRef}>
-          {children}
+  const Slider = ({ children }) => (
+    <>
+      {navigation && (
+        <div className="slider-nav spacer">
+          <button onClick={() => handleNavigation(-1)}>&#8592; Prev</button>
+          <button onClick={() => handleNavigation(1)}>Next &#8594;</button>
         </div>
-        {pagination && (
-          <div className="pagination">
-            {children.map((dot) => (
-              <div
-                key={dot.key}
-                onClick={() => handlePagination(dot.key)}
-                className="dot"
-              />
-            ))}
-          </div>
-        )}
-      </>
-    );
-  };
+      )}
+      <div className="container" ref={sliderRef}>
+        {children}
+      </div>
+      {pagination && Array.isArray(children) && (
+        <div className="pagination">
+          {children.map((_, i) => (
+            <div key={i} onClick={() => handlePagination(i)} className="dot" />
+          ))}
+        </div>
+      )}
+    </>
+  );
+  
   return {
     Slider,
   };
