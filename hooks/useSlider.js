@@ -18,12 +18,12 @@ export const useSlider = ({ navigation = true, pagination = false }) => {
 
   const Slider = ({ children }) => (
     <>
-      {navigation && (
+      {navigation ? (
         <div className="slider-nav spacer">
           <button onClick={() => handleNavigation(-1)}>&#8592; Prev</button>
           <button onClick={() => handleNavigation(1)}>Next &#8594;</button>
         </div>
-      )}
+      ) : null}
       <div className="container" ref={sliderRef}>
         {children}
       </div>

@@ -38,7 +38,7 @@ img {
 }
 
 main {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .container {
@@ -98,7 +98,7 @@ main {
   font-weight: 400;
 }
 .quote {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.5;
   font-weight: 400;
 }
@@ -126,7 +126,7 @@ main {
   cursor: pointer;
 }
 footer nav {
-  margin: 15rem 0 3rem 0;
+  margin: 10rem 0 2rem 0;
 }
 footer ul {
   display: flex;
@@ -164,8 +164,8 @@ footer ul {
   .spacer {
     padding: 0 4rem 0;
   }
-  footer nav {
-    margin: 10rem 0 2rem 0;
+  .quote {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 900px) {
@@ -180,6 +180,9 @@ footer ul {
   .spacer {
     padding: 0 3rem 0;
   }
+  main {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 480px) {
   .container {
@@ -193,9 +196,6 @@ footer ul {
   }
   .box h1 {
     font-size: 2.4rem;
-  }
-  footer nav {
-    margin: 6rem 0 2rem 0;
   }
   .quote {
     font-size: 1.6rem;
