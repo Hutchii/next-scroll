@@ -1,4 +1,4 @@
-## Slider using scroll-snap with navigation (with Next.js).
+## Slider using scroll-snap with navigation and pagination (with [Next.js](https://nextjs.org/)).
 
 ### CSS TL;DR:
 ```
