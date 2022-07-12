@@ -74,21 +74,6 @@ main {
   scroll-snap-align: start;
   margin-bottom: 2rem;
 }
-header nav {
-  height: 8rem;
-  font-size: 2rem;
-  font-weight: 500;
-}
-header nav ul {
-  display: flex;
-  gap: 4rem;
-  gap: 3.2rem;
-  align-items: center;
-  height: 100%;
-}
-header nav li {
-  cursor: pointer;
-}
 .slider-nav {
   display: flex;
   justify-content: flex-end;

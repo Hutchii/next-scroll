@@ -27,16 +27,16 @@ export const useSlider = ({ navigation = true, pagination = false }) => {
       <div className="container" ref={sliderRef}>
         {children}
       </div>
-      {pagination && Array.isArray(children) && (
+      {pagination && Array.isArray(children) && children.length > 1 ? (
         <div className="pagination">
           {children.map((_, i) => (
             <div key={i} onClick={() => handlePagination(i)} className="dot" />
           ))}
         </div>
-      )}
+      ) : null}
     </>
   );
-  
+
   return {
     Slider,
   };
