@@ -5,7 +5,7 @@ export default function Footer() {
         <ul>
           <li>
             <a
-              href="https://github.com/Hutchii"
+              href="https://github.com/Hutchii/nextjs-scroll-snap"
               target="_blank"
               rel="noopener noreferrer"
             >
