@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nextjs Scroll Snap</title>
+        <title>Nextjs with Scroll Snap</title>
         <meta
           name="description"
           content="Example of using scroll snap slider with Nextjs."
