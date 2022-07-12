@@ -69,6 +69,7 @@ main {
   border-radius: 2rem;
 }
 .box {
+  display: block;
   flex: 0 0 calc(33% - 1rem);
   scroll-snap-align: start;
   margin-bottom: 2rem;

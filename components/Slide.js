@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/future/image";
+import Link from "next/link";
 
 export default function Slide({ data }) {
   return (
@@ -8,7 +9,8 @@ export default function Slide({ data }) {
         alt="Tennis"
         width={600}
         height={700}
-        quality={85}
+        quality={80}
+        priority
       />
       <h1>{data.title}</h1>
       <p className="quote">{data.quote}</p>

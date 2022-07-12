@@ -1,5 +1,5 @@
 import Slide from "./Slide";
-import { slidesData } from "../utils/slidesData";
+import { slidesData } from "../data/slidesData";
 import { useSlider } from "../hooks/useSlider";
 
 export default function Slider() {
